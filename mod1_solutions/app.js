@@ -1,6 +1,8 @@
 (function(){
   'use strict';
-  angular.module('LunchCheck',[]).controller('LunchCheckController',function($scope)
+  angular.module('LunchCheck',[]).controller('LunchCheckController',LunchCheckController);
+  LunchCheckController.$inject=['$scope'];
+  function LunchCheckController($scope)
   {
     $scope.lunch_menu="";
     $scope.messageDisp="";
@@ -22,5 +24,5 @@
             $scope.messageDisp="Too Much";
           }
   };
-});
+}
 })();
